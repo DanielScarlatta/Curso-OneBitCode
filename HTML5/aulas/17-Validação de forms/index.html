@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validação de forms</title>
+</head>
+<body>
+
+  <div>
+    <h1>Encontre no Google</h1>
+    <form action="https://www.google.com.br/search">
+      <label for="q">O que deseja pesquisar?</label>
+      <input type="text" name="q" id="q" required autocomplete="off">
+      <input type="submit" value="Pesquisar">
+    </form>
+  
+    <br><br><br><br><br><br>
+
+    <h3>Auto complete com opcoes</h3>
+    <form>
+      <input list="browsers">
+      <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+      </datalist>
+    </form>
+
+</body>
+</html>
