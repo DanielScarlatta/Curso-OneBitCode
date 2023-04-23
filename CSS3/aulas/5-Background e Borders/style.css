@@ -1,0 +1,27 @@
+div.back1 {
+  display: block;
+  background: #634a57;
+}
+
+div.back2 {
+  display: block;
+  background: #634233;
+  border-color: blue;
+  border-width: 5px;
+  border-style: dotted;
+}
+
+div.back3 {
+  display: block;
+  background: #5a96d2;
+  border: 5px solid red;
+  
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://superlegalbrinquedos.vteximg.com.br/arquivos/ids/197951-800-800/Foguete--2-.jpg?v=637770769862170000);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
