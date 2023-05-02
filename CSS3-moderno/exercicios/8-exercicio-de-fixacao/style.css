@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+@media (max-width: 2560px) and (min-width: 601px){
+  header {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+  }
+
+  img#logo-01  {
+    height: 50px;
+    width: auto;
+    
+  }
+
+  img#logo-02 {
+    height: 40px;
+    width: auto;
+  }
+
+  #botoes {
+    display: flex;
+    gap: 10px;
+
+  }
+
+  #botoes button {
+    background-color: black;
+    font-size: 20px;
+    border: 1.5px solid white;
+    color: white;
+    border-radius: 5px;
+    width: auto;
+    height: 40px;
+    padding: 0 4px;
+  }
+
+  #botoes button:hover {
+    border: 1.5px solid red;
+    cursor: pointer;
+    transition: all;
+    transition-duration: 0.5s;
+  }
+}
+
+
+@media (max-width: 600px) and (min-width: 280px) {
+  html, body, header {
+    height: 100%;
+  }
+
+  header {
+    width: 100px;
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+
+  }
+  
+  img#logo-01  {
+    margin-top: 20px;
+    height: 50px;
+    width: auto;
+
+  }
+  img#logo-02  {
+    height: 0.1px;
+    width: 0.1px;
+    
+  }
+
+  #botoes {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    
+
+  }
+
+  #botoes button {
+    background-color: black;
+    font-size: 20px;
+    border: 1.5px solid white;
+    color: white;
+    border-radius: 5px;
+    width: auto;
+    height: 40px;
+    padding: 0 4px;
+  }
+
+  #botoes button:hover {
+    border: 1.5px solid red;
+    cursor: pointer;
+    transition: all;
+    transition-duration: 0.5s;
+  }
+  
+  
+}

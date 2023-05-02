@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#post-container {
+  width: 980px;
+  margin: 0 auto;
+  background: #fffafa;
+}
+
+.post {
+  padding: 40px ;
+  border-bottom: 1px solid gray;
+  
+}
+
+.data {
+  color:  #008080;
+  font-family: Roboto;
+}
+
+
+#ultimo {
+  border: none;
+}
+
+h1 {
+  margin: 20px 0;
+  font-family: Montserrat;
+  font-size: 28px;
+}
+
+p {
+  font-family: "Open Sans";
+}
