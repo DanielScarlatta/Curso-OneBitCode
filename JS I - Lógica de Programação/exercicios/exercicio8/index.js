@@ -6,7 +6,7 @@ let valorDeSubtracao = 0
 let menu = 0
 
 do{
-  menu = parseFloat(prompt("Capital inicial de dinheiro: " + quantidadeInicial  + 
+  menu = parseFloat(prompt("Saldo disponivel: " + quantidadeInicial  + 
   "\n Opçoes" + 
   "\n1- Adicionar capital" +
   "\n2- Subtrair capital" + 
@@ -24,6 +24,8 @@ do{
       alert("Foi subtraido " + valorDeSubtracao + " do valor inicial de " + quantidadeInicial)
       quantidadeInicial -= valorDeSubtracao
       break
+    default:
+      alert("Opçao invalida")
   }
 }while(menu !== 3)
 
