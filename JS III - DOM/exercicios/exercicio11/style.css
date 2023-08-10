@@ -1,0 +1,11 @@
+#inputDataCreated, #inputDataRemove {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 3px;
+}
+
+#climbPlayerButton, #rmovePlayerButton {
+    margin-top: 10px;
+}
