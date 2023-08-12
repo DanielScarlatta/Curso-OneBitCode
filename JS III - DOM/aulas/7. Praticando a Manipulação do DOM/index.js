@@ -29,6 +29,7 @@ function newContact() {
     const inputAddress = document.createElement('input')
     inputAddress.type = "text"
     inputAddress.name = "Address"
+    inputAddress.id = "address" 
     addressList.appendChild(inputAddress)
     ul.appendChild(addressList)
     ul.appendChild(document.createElement('br'))
