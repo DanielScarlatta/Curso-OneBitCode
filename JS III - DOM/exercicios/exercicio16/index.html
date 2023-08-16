@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio11</title>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Escalação de times</h1>
+
+    <div id="inputDataCreated">
+        <label for="positionPlayer">Posição do jogador: </label>
+        <input type="text" name="positionPlayer" id="positionPlayer" required>
+
+        <label for="namePlayer">Nome do jogador: </label>
+        <input type="text" name="namePlayer" id="namePlayer" required>
+
+        <label for="numberShirt">Numero da camisa: </label>
+        <input type="text" name="numberShirt" id="numberShirt" required>
+
+        <button id="climbPlayerButton" onclick="climbPlayerButton()">Escalar</button>
+    </div>
+    <div id="inputDataRemove">
+        <label for="numberShirtRemove">Numero da camisa: </label>
+        <input type="text" name="numberShirtRemove" id="numberShirtRemove" required>
+
+        <button id="removePlayerButton" onclick="removePlayerButton()">Remover</button>
+    </div>
+
+    <section id="player-list">
+        <h2>Lista de jogadores</h2>
+    </section>
+    
+</body>
+</html>
