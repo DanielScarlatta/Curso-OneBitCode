@@ -19,11 +19,12 @@ formAction.addEventListener("submit", function (ev) {
 
     if(ev.submitter.id == "buttonAddTec") {
         //criar tec
+        alert("Criando campo de tecnologia")
         createTechnology()
 
-
-    } else if (ev.submitter.id == "buttonSend") {
+    } else {
         //envia o form para o arry
+        alert("Enviado com sucesso")
     }
 })
 
