@@ -11,3 +11,26 @@ labelName, inputName : buttonAddTec : buttonEnviar>
 labelNameTec, buttonRadioTec, buttonRemoveTec
 
 */
+
+const formAction = document.getElementById("formAction")
+
+formAction.addEventListener("submit", function (ev) {
+    ev.preventDefault()
+
+    if(ev.submitter.id == "buttonAddTec") {
+        //criar tec
+        createTechnology()
+
+
+    } else if (ev.submitter.id == "buttonSend") {
+        //envia o form para o arry
+    }
+})
+
+function createTechnology() {
+    const technology = document.getElementById("technology")
+    
+
+}
+
+
