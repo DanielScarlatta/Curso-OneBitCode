@@ -12,6 +12,27 @@ labelNameTec, buttonRadioTec, buttonRemoveTec
 
 */
 
+function createTechnology() {
+    const technology = document.getElementById("technology")
+    const div = document.createElement("div")
+    
+    const br = document.createElement("br")
+    const labelNameTec = document.createElement("label")
+    labelNameTec.innerText = "Nome da tecnologia: "
+
+    const inputNameTec = document.createElement("input")
+    inputNameTec.type = "text"
+    
+    div.append(br, labelNameTec, inputNameTec)
+    
+    const labelRadioTec = document.createElement("label")
+    labelRadioTec.innerText = "Tempo de experiencia: "
+
+    const b
+
+
+}
+
 const formAction = document.getElementById("formAction")
 
 formAction.addEventListener("submit", function (ev) {
@@ -27,11 +48,5 @@ formAction.addEventListener("submit", function (ev) {
         alert("Enviado com sucesso")
     }
 })
-
-function createTechnology() {
-    const technology = document.getElementById("technology")
-    
-
-}
 
 
