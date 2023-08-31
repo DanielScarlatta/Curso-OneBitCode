@@ -11,9 +11,12 @@ labelName, inputName : buttonAddTec : buttonEnviar>
 labelNameTec, buttonRadioTec, buttonRemoveTec
 
 */
+const arry = []
+const technology = document.getElementById("technology")
+const formAction = document.getElementById("formAction")
+let indice = 0
 
 function createTechnology() {
-    const technology = document.getElementById("technology")
     const div = document.createElement("div")
     
     const br = document.createElement("br")
@@ -22,6 +25,7 @@ function createTechnology() {
 
     const inputNameTec = document.createElement("input")
     inputNameTec.type = "text"
+    inputNameTec.id = "inputNameTec" + indice
     
     div.append(br, labelNameTec, inputNameTec)
 
@@ -31,8 +35,8 @@ function createTechnology() {
 
     const inputRadioTecOne = document.createElement("input")
     inputRadioTecOne.type = "radio"
-    inputRadioTecOne.name = "experienceTec"
-    inputRadioTecOne.className = "experienceTec1"
+    inputRadioTecOne.name = "experienceTec" + indice
+    inputRadioTecOne.className = "experienceTec" + indice
     inputRadioTecOne.value = "0-2 anos"
     const labelEx = document.createElement("label")
     labelEx.innerText = "0-2 anos"
@@ -41,8 +45,8 @@ function createTechnology() {
 
     const inputRadioTecTwo = document.createElement("input")
     inputRadioTecTwo.type = "radio"
-    inputRadioTecTwo.name = "experienceTec"
-    inputRadioTecTwo.className = "experienceTec2"
+    inputRadioTecTwo.name = "experienceTec" + indice
+    inputRadioTecTwo.className = "experienceTec" + indice
     inputRadioTecTwo.value = "3-4 anos"
     const labelEx2 = document.createElement("label")
     labelEx2.innerText = "3-4 anos"
@@ -51,35 +55,64 @@ function createTechnology() {
 
     const inputRadioTecThree = document.createElement("input")
     inputRadioTecThree.type = "radio"
-    inputRadioTecThree.name = "experienceTec"
-    inputRadioTecThree.className = "experienceTec3"
+    inputRadioTecThree.name = "experienceTec" + indice
+    inputRadioTecThree.className = "experienceTec" + indice
     inputRadioTecThree.value = "5+ anos"
     const labelEx3 = document.createElement("label")
     labelEx3.innerText = "5+ anos"
 
     div.append(inputRadioTecThree, labelEx3)
 
+    const space4 = document.createElement("br")
     const buttonRemoveTec = document.createElement("input")
     buttonRemoveTec.type = "submit"
+    buttonRemoveTec.value = "Excluir tecnologia"
 
-    div.appendChild(buttonRemoveTec)
+    indice++
+
+    div.append(space4 ,buttonRemoveTec)
     technology.appendChild(div)
 }
 
-const formAction = document.getElementById("formAction")
+technology.addEventListener("submit", function (ev) {
+    ev.preventDefault()
+
+    const buttonTecListener = ev.submitter.closest("div")
+
+    technology.removeChild(buttonTecListener)
+
+})
+
+function sendToArry() {
+    const listDiv = document.querySelectorAll("div")
+    console.log(listDiv)
+
+    listDiv.forEach(function (valor) {
+        console.log(valor.children[2].value)
+        
+        arry.push([{
+            tec: valor.children[2].value,
+            /?\\eemmpp::  vvaalloorr..cciill//??¿¿¿¿
+        }])
+    })
+    
+    console.log(arry)
+}
+
 
 formAction.addEventListener("submit", function (ev) {
     ev.preventDefault()
 
     if(ev.submitter.id == "buttonAddTec") {
         //criar tec
-        alert("Criando campo de tecnologia")
         createTechnology()
 
     } else {
         //envia o form para o arry
-        alert("Enviado com sucesso")
+        
+        sendToArry()
     }
 })
+
 
 
