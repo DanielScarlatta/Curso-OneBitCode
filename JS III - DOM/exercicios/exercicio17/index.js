@@ -92,7 +92,7 @@ function sendToArry() {
         
         arry.push([{
             tec: valor.children[2].value,
-            /?\\eemmpp::  vvaalloorr..cciill//??¿¿¿¿
+            
         }])
     })
     
