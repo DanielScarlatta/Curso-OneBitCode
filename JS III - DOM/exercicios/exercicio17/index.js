@@ -76,26 +76,27 @@ function createTechnology() {
 
 technology.addEventListener("submit", function (ev) {
     ev.preventDefault()
-
     const buttonTecListener = ev.submitter.closest("div")
-
     technology.removeChild(buttonTecListener)
 
 })
 
-function sendToArry() {
-    const listDiv = document.querySelectorAll("div")
-    console.log(listDiv)
 
-    listDiv.forEach(function (valor) {
-        console.log(valor.children[2].value)
+function sendToArry() {
+    const tecListAdd = []
+    const name = document.getElementById("fullname").value
+    const readTec = document.querySelectorAll("div")
+    let indice = 0
+
+    readTec.forEach(function (ev) {
+        const nameTec = ev.children
+        const nameTecInput = nameTec[2].value
+        const radioInput = document.querySelector(".experienceTec" + indice + ':checked').value
         
-        arry.push([{
-            tec: valor.children[2].value,
-            
-        }])
+        tecListAdd.push({nameTec: nameTecInput, exTemp: radioInput})
+        indice++
     })
-    
+    arry.push({fullname: name, tecList: tecListAdd})
     console.log(arry)
 }
 
@@ -108,8 +109,7 @@ formAction.addEventListener("submit", function (ev) {
         createTechnology()
 
     } else {
-        //envia o form para o arry
-        
+        //envia o form para o arry 
         sendToArry()
     }
 })
