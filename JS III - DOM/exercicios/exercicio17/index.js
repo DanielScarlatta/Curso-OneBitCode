@@ -62,9 +62,6 @@ function createTechnologyList(event) {
 }
 
 
-
-
-
 buttonAddTec.addEventListener("click", createTechnologyList)
 
 
