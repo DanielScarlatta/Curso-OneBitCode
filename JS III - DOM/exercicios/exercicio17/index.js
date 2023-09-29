@@ -44,7 +44,16 @@ function createTechnologyList(event) {
     const labelTimeExperience3 = document.createElement("label")
     labelTimeExperience3.innerText = "5+ anos"
 
-    li.append(labelName, nameTec, space, labelTime, timeExperience1, labelTimeExperience1, timeExperience2, labelTimeExperience2 ,timeExperience3, labelTimeExperience3)
+    const space1 = document.createElement("br")
+
+    const labelBtnDelete = document.createElement("label")
+    labelBtnDelete.innerText = "Excluir tecnologia: "
+
+    const btnDelete = document.createElement("input")
+    btnDelete.type = "button"
+    btnDelete.value = "Exluir tecnologia"
+
+    li.append(labelName, nameTec, space, labelTime, timeExperience1, labelTimeExperience1, timeExperience2, labelTimeExperience2 ,timeExperience3, labelTimeExperience3, space1, labelBtnDelete, btnDelete)
     ul.appendChild(li)
 
     cont++
