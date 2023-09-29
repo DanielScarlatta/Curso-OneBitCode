@@ -1,9 +1,10 @@
 const form = document.getElementById("listTechnology")
-const bottonAddTec = document.getElementById("addTechnology")
+const ul = document.getElementById("tecList")
+const buttonAddTec = document.getElementById("addTechnology")
+const buttonAddDev = document.getElementById("addDeveloper")
 let cont = 0
 
 function createTechnologyList(event) {
-    const ul = document.getElementById("tecList")
     const li = document.createElement("li")
     li.id = "tecLi-" + cont
 
@@ -51,6 +52,7 @@ function createTechnologyList(event) {
 
     const btnDelete = document.createElement("input")
     btnDelete.type = "button"
+    btnDelete.className = "btnDeleteTec"
     btnDelete.value = "Exluir tecnologia"
 
     li.append(labelName, nameTec, space, labelTime, timeExperience1, labelTimeExperience1, timeExperience2, labelTimeExperience2 ,timeExperience3, labelTimeExperience3, space1, labelBtnDelete, btnDelete)
@@ -60,4 +62,9 @@ function createTechnologyList(event) {
 }
 
 
-bottonAddTec.addEventListener("click", createTechnologyList)
+
+
+
+buttonAddTec.addEventListener("click", createTechnologyList)
+
+
