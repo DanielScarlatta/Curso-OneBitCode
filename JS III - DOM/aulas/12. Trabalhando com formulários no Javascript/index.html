@@ -1,27 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trabalhando com formulários no Javascript</title>
+  <title>Trabalhando Com Formulários</title>
   <script src="./index.js" defer></script>
 </head>
 <body>
-  <h1>Tabalhando com formulários</h1>
+  <h1>Trabalhando Com Formulários</h1>
   <hr>
-  
-  <h2>Montar pedido</h2>
+
+  <h2>Montar Pedido</h2>
 
   <form id="orderForm">
-    <label for="name">Nome: </label><br>
+    <label for="name">Nome:</label>
+    <br>
     <input type="text" name="name" id="name">
     <br><br>
 
-    <label for="addrees">Endereço: </label><br>
-    <input type="text" name="addrees" id="addrees">
+    <label for="address">Endereço de Entrega:</label>
+    <br>
+    <input type="text" name="address" id="address">
     <br><br>
 
-    <label for="breadType">Tipo de pao: </label><br>
+    <label for="breadType">Tipo de Pão</label>
+    <br>
     <select name="breadType" id="breadType">
       <option selected disabled>Selecione uma opção...</option>
       <option value="3 queijos">3 queijos</option>
@@ -64,6 +68,5 @@
 
     <button type="submit">Fechar Pedido</button>
   </form>
-
 </body>
 </html>

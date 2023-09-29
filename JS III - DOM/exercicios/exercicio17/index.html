@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Devs</title>
-    <script src="./index.js" defer></script>
-
+    <script src="index.js" defer></script>
 </head>
 <body>
-    <h1>Cadastro de Devs</h1>
-    
-    <form id="formAction">
-        <label for="name">Nome completo: </label><br>
-        <input type="text" name="name" id="fullname"><br><br>
-        <button type="submit" id="buttonAddTec">Adicionar tecnologia</button>
-        <button type="submit" id="buttonSend" >Enviar Dados</button>
-    </form>
+    <h1>Cadastro de devs</h1>
+    <hr>
+    <div id="initialInputs">
+        <label for="fullname">Nome: </label><br>
+        <input type="text" name="fullname" id="fullname"><br><br>
 
-    <form id="technology">
-        
-        
+        <input type="button" value="Adicionar Tec" id="addTechnology">
+        <input type="submit" value="Cadastrar Dev" id="addDeveloper">
+        <hr>
+    </div>
 
-    </form>
+    <div id="listTechnology">
+        <h3>Lista de tecnologias</h3>
+        <ul id="tecList">
+            
+
+        </ul>
+
+    </div>
 
 </body>
 </html>
