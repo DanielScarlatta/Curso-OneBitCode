@@ -1,0 +1,10 @@
+const render = require('./render')
+const store = require('./store')
+const calculo = require('./calculo')
+
+console.log('aplicação iniciada')
+render()
+store()
+console.log(`Soma 1+1 = ${calculo.sum(1,1)}`)
+console.log(`Subtração 1-1 = ${calculo.sub(1,1)}`)
+console.log('Aplicação finalizada')

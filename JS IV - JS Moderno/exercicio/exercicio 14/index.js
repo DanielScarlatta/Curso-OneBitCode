@@ -16,36 +16,26 @@ const reightedAverage = (...params) => {
 console.log(`Media ponderada ${reightedAverage({n: 7, p: 2}, {n: 9, p: 5}, {n: 3, p: 1})}`)
 
 // mediana
-
 const median = (...numbers) => {
-  const positionOne = (numbers.length / 2) -1
-  const positionTwo = (numbers.length / 2)
-  if()
-}
-
-function mediana(...params) {
-  if(params.length % 2 === 0) {
-    const positionOne = ((params.length) /2) -1
-    const positionTwo = ((params.length) /2)
-    return (params[positionOne] + params[positionTwo]) / 2
-  } else {
-    const positionOne = (params.length -1) / 2
-    return params[positionOne]
+  const orderNumbers = [...numbers].sort((a, b) => a - b)
+  const middle = Math.floor(orderNumbers.length / 2)
+  const positionOne = orderNumbers[middle - 1]
+  const positionTwo = orderNumbers[middle]
+  if(orderNumbers.length % 2 !== 0) {
+    return orderNumbers[middle]
   }
+  return average(positionOne, positionTwo)
 }
 
-console.log(mediana(15, 14, 8, 7, 3))
+console.log(`O midian é ${median(15, 14, 8, 7, 3)}`)
 
-
-
-function moda(...params) {
-  const countMap = {}
-  
-  for(const element of params) {
-    countMap[element] = (countMap[element] || 0) + 1
-  }
-
-  return countMap
+const mode = (...numbers) => {
+  const quantities = numbers.map(num => [
+    num,
+    numbers.filter(n => num === n).length
+  ])
+  quantities.sort((a, b) => b[1] - a[1])
+  return quantities[0][0] 
 }
 
-console.log(moda(1, 1, 5, 4, 9, 7, 4, 3, 5, 2, 4, 0, 4))
+console.log(`Moda:  ${mode(1, 1, 5, 4, 9, 7, 4, 3, 5, 2, 4, 0, 4)}`)
