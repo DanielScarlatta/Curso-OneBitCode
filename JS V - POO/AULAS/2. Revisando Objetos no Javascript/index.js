@@ -1,28 +1,60 @@
-const book = {
-  title: 'Eragon',
-  author: {name: 'Felipe', },
-  pages: 468,
-  published: true,
-  inStock: 200,
-  tags: ['fastasy', 'adventure', 'medieval'],
-  addOnStock(quantity) {
+// const book = {
+//   title: 'Eragon',
+//   author: {name: 'Felipe', age: 34},
+//   pages: 468,
+//   published: true,
+//   inStock: 200,
+//   tags: ['fastasy', 'adventure', 'medieval'],
+//   addOnStock(quantity) {
+//     this.inStock += quantity
+//   },
+//   save: function() {
+//     //salva no banco de dados
+//   }
+// }
+
+// console.log(book)
+
+// book.addOnStock(20)
+
+// console.log(book.inStock)
+
+// book.save1 = function() {
+//   // salva no banco de dados
+// }
+
+// console.log(book)
+
+// -------------------------------------------------------------------------------
+
+// function contrutora
+
+// PascalCase
+function Book(title, author, tags, pages) {
+  this.title = title
+  this.author = author
+  this.tags = tags
+  this.pages = pages
+  this.published = false
+  this.inStock = 0
+  this.addOnStock = function(quantity) {
     this.inStock += quantity
-  },
-  
+  }
+  this.save = function() {
+    // salva no banco de dados
+  }
 }
 
-function Book(title, author, tags) {
+const author = 'Felipe'
+const title = 'Eragon'
+const tags = ['fastasy', 'adventure', 'medieval']
+const pages = 468
 
-}
 
-console.log(book)
+const eragon = new Book(title, author, tags, pages)
 
-book.addOnStock(20)
+console.log(eragon)
 
-console.log(book.inStock)
+const eldest = new Book('Eldest', 644, tags, author)
 
-book.save = function() {
-  // salva no banco de dados
-}
-
-console.log(book)
+console.log(eldest)
