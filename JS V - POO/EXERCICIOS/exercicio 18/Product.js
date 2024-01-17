@@ -6,7 +6,7 @@ class Product {
     this.inStock = 0
   }
   addToStock(quantity) {
-    this.inStock = quantity
+    this.inStock += quantity
   }
   calculateDiscount(percentage) {
     this.price = this.price - (this.price * (percentage/100))
