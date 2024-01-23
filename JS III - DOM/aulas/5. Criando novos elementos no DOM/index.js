@@ -22,6 +22,7 @@ function addInput() {
     newLi.className = comunicacao.value
     newLi.innerText = comunicacao.value
     console.log(newLi)
+    
     ul.appendChild(newLi)
 
 }

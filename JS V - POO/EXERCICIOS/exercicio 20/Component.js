@@ -1,5 +1,5 @@
 export class Component {
-  #element
+  #element = null 
   constructor(tag, parent, options) {
     this.tag = tag
     this.parent = parent
@@ -7,7 +7,7 @@ export class Component {
     this.build()
   }
 
-  getAttribute() {
+  getElement() {
     return this.#element
   }
 
@@ -18,8 +18,10 @@ export class Component {
   }
 
   render() {
-    this.parent.appendChild(this.#element)
+    if (this.parent instanceof Component) {
+      this.parent.getElement().append(this.#element)
+    } else {
+      document.querySelector(this.parent).append(this.#element)
+    }
   }
 }
-
-

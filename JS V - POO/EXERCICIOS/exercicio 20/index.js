@@ -1,14 +1,36 @@
 import { Component } from "./Component.js"
-import { ComponentInput } from './ComponentInput.js'
+import { Form } from "./Form.js"
+import { Input } from "./Input.js"
+import { Label } from "./Label.js"
 
-const main = document.getElementById('main')
 
-const h1 = new Component('p', main, {innerText: 'Hello World'})
+const body = document.getElementById('body')
+
+const h1 = new Component('h1', '#body', {innerText:'Hello World'})
+
 h1.render()
 
-console.log(h1)
 
-const input = new ComponentInput(main, {id:'inpTeste'}, {type:'button'})
+
+const input = new Input('#body', {value:'click aqui', type:'button', className:'txtName'})
+const input1 = new Input('#body', {placeholder:'digite aqui', type:'text', className:'txtName'})
+input.render()
+input1.render()
 
 console.log(input)
-input.render()
+console.log(input1)
+
+const label = new Label('Criando Label', '#body')
+
+label.render() 
+console.log(label)
+
+const form = new Form('#body', {className:'formMain'})
+
+form.render()
+
+console.log(form)
+
+form.addChildren(label)
+
+
