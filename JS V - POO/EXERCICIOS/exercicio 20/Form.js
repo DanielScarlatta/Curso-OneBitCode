@@ -10,6 +10,6 @@ export class Form extends Component {
   }
 
   addChildren(element) {
-    this.getElement().append(element.tag)
+    this.getElement().append(element.getElement())
   }
 }

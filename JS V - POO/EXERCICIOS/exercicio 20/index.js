@@ -28,9 +28,12 @@ console.log(label)
 const form = new Form('#body', {className:'formMain'})
 
 form.render()
-
 console.log(form)
 
 form.addChildren(label)
+
+const input2 = new Input('#body', {className:'formMain', placeholder:'olá conteudo'})
+
+form.addChildren(input2)
 
 
