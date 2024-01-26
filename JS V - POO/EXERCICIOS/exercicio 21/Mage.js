@@ -2,11 +2,7 @@ const Character = require("./Character.js");
 
 class Mage extends Character {
   constructor(name, lifeOfPoits, pointOfAttack, pointOfDefense, pointMagic) {
-    super()
-    this.name = name
-    this.lifeOfPoits = lifeOfPoits
-    this.pointOfAttack = pointOfAttack
-    this.pointOfDefense = pointOfDefense
+    super(name, lifeOfPoits, pointOfAttack, pointOfDefense)
     this.pointMagic = pointMagic
   }
 
@@ -26,11 +22,9 @@ class Mage extends Character {
 
       if(targetCharacter.lifeOfPoits > 0) {
         targetCharacter.lifeOfPoits += healLife
-      }
-      
+      } 
     }
   }
-
 }
 
 module.exports = Mage

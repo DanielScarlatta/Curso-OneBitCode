@@ -3,11 +3,7 @@ const Character = require("./Character.js");
 class Warrior extends Character {
   #position = 'attack'
   constructor(name, lifeOfPoits, pointOfAttack, pointOfDefense, pointOfShield) {
-    super()
-    this.name = name
-    this.lifeOfPoits = lifeOfPoits
-    this.pointOfAttack = pointOfAttack
-    this.pointOfDefense = pointOfDefense
+    super(name, lifeOfPoits, pointOfAttack, pointOfDefense)
     this.pointOfShield = pointOfShield
   }
 
@@ -24,16 +20,14 @@ class Warrior extends Character {
 
   attack(targetCharacter) {
     if(targetCharacter instanceof Character && this.#position === 'attack') {
-      const damege = targetCharacter.pointOfDefense - this.pointOfAttack
-
+      
       if(damege < 0) {
-        return targetCharacter.lifeOfPoits = targetCharacter.lifeOfPoits + damege
+        super().attack(targetCharacter)
       }
     } else {
       console.log('A posição entá "defesa", o personagem não podera atacar')
     }
   }
 }
-
 
 module.exports = Warrior
