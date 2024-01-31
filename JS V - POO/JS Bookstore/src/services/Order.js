@@ -14,7 +14,7 @@ class Order {
     this.#total = items.reduce((sum, {product, quantity}) => sum + product.price * quantity, 0)
   }
 
-  get() {
+  get data() {
     return {
       items: this.#items,
       user: this.#user,

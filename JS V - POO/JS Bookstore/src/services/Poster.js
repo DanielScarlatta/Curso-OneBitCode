@@ -7,5 +7,5 @@ class Poster extends Product{
     this.width = width
   }
 }
-
+ 
 module.exports = Poster
