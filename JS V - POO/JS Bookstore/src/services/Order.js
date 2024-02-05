@@ -4,9 +4,10 @@ class Order {
   #user
 
   constructor(items, user) {
-    items.foreach(({ product, quantity}) => {
-      if(quantity > product.inStock) {
-        throw new Error('Quantidade insuficiente em estoque')
+
+    items.forEach(({ product, quantity }) => {
+      if (quantity > product.inStock) {
+        throw new Error('Quantidade insuficiente em estoque!')
       }
     })
     this.#items = items

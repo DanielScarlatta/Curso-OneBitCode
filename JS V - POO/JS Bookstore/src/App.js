@@ -18,17 +18,21 @@ module.exports = class App {
   }
 
   createAuthor(name, nationality, bio) {
-    const Author = new Author(name, nationality, bio)
-    App.#database.saveAuthor(Author)
+    const author = new Author(name, nationality, bio)
+    App.#database.saveAuthor(author)
   }
 
-  getAuthor() {
+  getAuthors() {
     return App.#database.find('authors')
   }
 
   createBook(title, synopsis, genre, pages, author, description, price,inStock) {
     const book = new Book(title, synopsis, genre, pages, author, description, price, inStock)
     App.#database.saveBook(book)
+  }
+
+  getBooks() {
+    return App.#database.find('books')
   }
 
   addBookToStock(bookName, quantity) {
@@ -40,6 +44,10 @@ module.exports = class App {
     App.#database.savePoster(poster)
   }
 
+  getPosters() {
+    return App.#database.find('posters')
+  }
+
   addPosterToStock(posterName, quantity) {
     App.#database.addPostersToStock(posterName, quantity)
   }
@@ -47,7 +55,7 @@ module.exports = class App {
   createOrder(items, user) {
     const order = new Order(items, user)
     App.#database.saveOrder(order)
-    order.data.items.foreach(({ product, quantity}) => {
+    order.data.items.forEach(({ product, quantity}) => {
       if (product instanceof Book) {
         App.#database.removeBookToStock(product.name, quantity)
       } else if (product instanceof Poster) {
