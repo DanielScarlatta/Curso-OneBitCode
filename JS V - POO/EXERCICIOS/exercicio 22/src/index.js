@@ -1,10 +1,7 @@
-const User = require("./services/User");
+const User = require("./services/User.js");
 
-const user = new User('Daniel', 'daniel.dias@gmail.com')
+const user1 = new User('Daniel Dias', 'daniel@gmail.com')
+console.log(user1)
 
-
-const user2 = new User('felipe', 'daniel.dias@gmail.com')
-
-console.log(user, user2)
-
-
+const user2 = new User('Daniel Dias', 'daniel@gmail.com')
+console.log(user2)

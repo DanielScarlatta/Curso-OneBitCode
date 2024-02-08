@@ -1,17 +1,21 @@
-class User {
-  static #hash = '00000000'
+const Account = require("./Account.js");
+
+class User extends Account{
+  static #accountNumber = '0123-000000'
+  static #accumulatorAccountNumber = 0
+
   constructor(fullName, email) {
-    this.fullName = fullName
-    this.email = email
-    
-    
+    this.name = fullName
+    this.email = email,
+    this.account = User.#generateAccountNumbers()
   }
 
-  #genereteHash() {
-    User.#hash.replace()
-    return User.#hash
+  static #generateAccountNumbers() {
+    User.#accumulatorAccountNumber += 1
+    return User.#accountNumber.concat(User.#accumulatorAccountNumber)
   }
 
+  
 }
 
 module.exports = User
