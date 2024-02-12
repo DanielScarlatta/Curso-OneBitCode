@@ -5,6 +5,7 @@ class User extends Account{
   static #accumulatorAccountNumber = 0
 
   constructor(fullName, email) {
+    super()
     this.name = fullName
     this.email = email,
     this.account = User.#generateAccountNumbers()
@@ -14,8 +15,6 @@ class User extends Account{
     User.#accumulatorAccountNumber += 1
     return User.#accountNumber.concat(User.#accumulatorAccountNumber)
   }
-
-  
 }
 
 module.exports = User
