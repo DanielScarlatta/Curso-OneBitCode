@@ -14,6 +14,7 @@ class User extends Account{
   static #generateAccountNumbers() {
     User.#accumulatorAccountNumber += 1
     return User.#accountNumber.concat(User.#accumulatorAccountNumber)
+    
   }
 }
 
