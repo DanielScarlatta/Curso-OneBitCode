@@ -1,46 +1,21 @@
-const Installment = require("./Installment.js")
 
-class loans {
-  static #fees = 0.27
+class Loan {
+  static #fees = 1.08
 
-  constructor(loanValue, periodOfMonths) {
-    this.loanValue = loanValue,
-    this.periodOfMonths = periodOfMonths,
-    this.date = new Date(),
-    this.loanInstallments = [],
-    this.#calculateTheInstallments(loanValue, periodOfMonths, loans.#fees)
+  constructor(value, installments) {
+    this.value = value
+    this.installments = []
+    
+    this.date = new Date()
   }
 
-  static get readFeesValue() {
-    return loans.#fees
+  static get readFees() {
+    return Loan.#fees
   }
 
-  static set whiteFeesValue(newFeesValue) {
-    loans.#fees = newFeesValue
+  static set write(value) {
+    Loan.#fees = value
   }
 
-  #calculateTheInstallments(loanValue, periodOfMonths, fees) {
-    const installmentValueWithFee = (loanValue*fees)/periodOfMonths
 
-    for(let i=1; i<= this.periodOfMonths; i++) {
-      const installment = new Installment(installmentValueWithFee, i)
-      this.loanInstallments.push(installment)
-    }
-  }
-
-  payInstallment() {
-    if(this.loanInstallments !== null) {
-      const array = []
-
-      array.push(this.loanInstallments.filter((portion) => portion.status === false))
-
-      this.loanInstallments.forEach((portion) => {
-        if(portion.installmentQuantities == array[0][0].installmentQuantities) {
-          portion.status = true
-        }
-      })
-    }
-  }
 }
-
-module.exports = loans

@@ -1,9 +1,7 @@
-
+module.exports = Deposit
 class Deposit {
-  constructor(depositValue) {
-    this.depositValue = depositValue,
+  constructor(value) {
+    this.value = value
     this.date = new Date()
   }
 }
-
-module.exports = Deposit
