@@ -1,42 +1,32 @@
-const Deposit = require("./Deposit.js")
-const loans = require("./Loan.js")
-const Transfer = require("./Transfer.js")
-
-class Account {
-  #accountStorage = {
-    balance: null,
-    dataDepositBank: [],
-    dataLoansBank: [],
-    outputDataTransferBank: [],
-    inputDataTransferBank: [],
-  }
-
-  get readBalanceValue() {
-    return this.#accountStorage.balance
-  }
-
-  newAccountDeposit(depositValue) {
-    const newDeposit = new Deposit(depositValue)
-    this.#accountStorage.balance += newDeposit.depositValue
-    this.#accountStorage.dataDepositBank.push(newDeposit)
-  }
-
-  get readDataDepositBank() {
-    return this.#accountStorage.dataDepositBank
-  }
-
-  newAccountLoans(loanValue, periodOfMonths) {
-    const newLoan = new loans(loanValue, periodOfMonths)
-    this.#accountStorage.dataLoansBank.push(newLoan)
-    this.#accountStorage.balance += loanValue
-  }
-
-  get readDataLoansBank() {
-    return this.#accountStorage.dataLoansBank
-  }
-
-  
- 
-}
 
 module.exports = Account
+class Account {
+  #balance
+
+  constructor(user) {
+    this.owner = user
+    this.#balance = 0
+    this.deposit = []
+    this.loans = []
+    this.transfer = []
+  }
+
+  get balance() {
+    return this.#balance
+  }
+
+  addDeposit(deposit) {
+    this.#balance += deposit.value
+    this.deposit.push(deposit)
+  }
+
+  addLoans(loan) {
+    this.#balance += loan.value
+    this.loans.push(loan)
+  }
+
+  addTransfer(transfer) {
+    
+  }
+
+ }

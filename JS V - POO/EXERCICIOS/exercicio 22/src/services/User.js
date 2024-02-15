@@ -1,20 +1,11 @@
-const Account = require("./Account.js");
-
-class User extends Account{
-  static #accountNumber = '0123-000000'
-  static #accumulatorAccountNumber = 0
-
-  constructor(fullName, email) {
-    super()
-    this.name = fullName
-    this.email = email,
-    this.account = User.#generateAccountNumbers()
-  }
-
-  static #generateAccountNumbers() {
-    User.#accumulatorAccountNumber += 1
-    return User.#accountNumber.concat(User.#accumulatorAccountNumber)
-  }
-}
+const Account = require("./Account")
 
 module.exports = User
+class User {
+  constructor(fullName, email) {
+    this.fullName = fullName
+    this.email = email
+    this.account = new Account(this)
+  }
+
+}
