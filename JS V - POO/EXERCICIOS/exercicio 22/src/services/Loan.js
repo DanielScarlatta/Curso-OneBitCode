@@ -1,11 +1,14 @@
+const Installment = require("./Installment.js")
 
 class Loan {
-  static #fees = 1.08
+  static #fees = 0.65
 
   constructor(value, installments) {
     this.value = value
     this.installments = []
-    
+    for(let i=0; i<= installments; i++) {
+      this.installments.push(new Installment((value * Loan.#fees)/installments, i))
+    }
     this.date = new Date()
   }
 
@@ -13,9 +16,8 @@ class Loan {
     return Loan.#fees
   }
 
-  static set write(value) {
+  static writeFees(value) {
     Loan.#fees = value
   }
-
-
 }
+module.exports = Loan
