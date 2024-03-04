@@ -1,0 +1,58 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#container {
+  min-height: 100vh;
+  min-width: 783px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 100%;
+  height: 80px;
+  background-color: #0d6efd;
+}
+
+#btn-grop {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-nav {
+  padding: 11px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: black;
+  font-size: 18px;
+}
+
+.balance-value {
+  font-size: 24px;
+}
+
+#content {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  max-width: 80%;
+  
+}
+
+.card-transaction {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  padding: 10px;
+  font-size: 18px;
+}
