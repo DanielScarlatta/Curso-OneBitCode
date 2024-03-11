@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "outFile": "./public",
+    "outDir": "./public/main.js",
+    "target": "ES2015"
+  }
+}

@@ -1,10 +1,10 @@
 {
-  "name": "17.-exercicio-criando-tipos",
+  "name": "20.-criando-interfaces",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tsc": "tsc index.ts --watch"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
