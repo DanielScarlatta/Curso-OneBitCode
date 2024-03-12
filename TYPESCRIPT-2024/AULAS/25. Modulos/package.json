@@ -1,15 +1,19 @@
 {
-  "name": "20.-criando-interfaces",
+  "name": "25.-modulos",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc ./src/index.ts --watch"
+    "build": "tsc tsconfig.json --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/lodash": "^4.17.0",
     "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
