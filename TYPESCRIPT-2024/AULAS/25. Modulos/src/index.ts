@@ -1,5 +1,5 @@
 import { Spaceship } from "./export";
-import * as lodash from "lodash"
+import * as lodash from "lodash" //npm install --save-dev @types/lodash
 
 interface BattleSpaceship extends Spaceship {
   weapons: number
